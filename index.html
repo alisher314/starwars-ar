@@ -9,7 +9,6 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     
     <style>
-        /* Космическая кнопка */
         #ar-button {
             position: fixed;
             bottom: 40px;
@@ -49,6 +48,7 @@
             <video 
                 id="swVideo" 
                 src="starwars.mp4" 
+                type="video/mp4"
                 preload="auto" 
                 loop="true" 
                 crossorigin="anonymous" 
@@ -77,15 +77,14 @@
         const video = document.querySelector('#swVideo');
         const r2d2 = document.querySelector('#r2d2Sound');
 
-        // Одновременный запуск видео и звука R2-D2 по клику
         btn.addEventListener('click', () => {
-            // Запускаем видео со встроенным звуком
-            video.play().catch(err => console.log("Ошибка видео:", err));
+            // Принудительно включаем звук на видео перед воспроизведением
+            video.muted = false; 
             
-            // Запускаем писк R2-D2 поверх видео
+            video.play().catch(err => console.log("Ошибка видео:", err));
             r2d2.play().catch(err => console.log("Ошибка R2-D2:", err));
             
-            btn.style.display = 'none'; // Скрываем кнопку
+            btn.style.display = 'none';
         });
     </script>
 </body>
