@@ -9,7 +9,6 @@
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     
     <style>
-        /* Стили для космической кнопки запуска */
         #ar-button {
             position: fixed;
             bottom: 40px;
@@ -51,22 +50,19 @@
         </a-assets>
 
         <a-marker preset="hiro">
-            
             <a-entity rotation="-60 0 0" position="0 0 0">
                 
                 <a-text 
                     value="В далекой-далекой галактике маленький R2D2 уловил странный сигнал...\n\nЭто была не просьба о помощи.\nНе сигнал бедствия.\nИ даже не сообщение Повстанцев.\n\nЭто была потеря энергии одной очень уставшей джедайки \n\nСканеры показали:\n- слишком много учебы,\n- слишком мало отдыха,\n- критически низкий уровень сладостей,\n- и опасное снижение мидихлорианов.\n\nТогда R2D2 тайно покинул базу Сопротивления и отправился через тысячи звездных систем, чтобы доставить особый груз прямо на планету Земля.\n\nМиссия:\n«Вернуть немного Силы Малике» \n\nИмперия сладостей наносит ответный удар \nДа пребудет с тобой Сила."
                     align="center"
                     color="#FFC500" 
-                    font="https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/exo2/Exo2-Bold.json"
-                    font-image="https://raw.githubusercontent.com/etiennepinchon/aframe-fonts/master/fonts/exo2/Exo2-Bold.png"
+                    font="dejavu"
                     width="4"
                     wrap-count="30"
                     animation="property: position; from: 0 -2 -0.5; to: 0 4 -3; dur: 22000; loop: true; easing: linear">
                 </a-text>
 
             </a-entity>
-
         </a-marker>
 
         <a-entity camera></a-entity>
